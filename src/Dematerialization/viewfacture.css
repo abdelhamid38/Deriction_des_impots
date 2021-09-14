@@ -1,0 +1,19 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.textfield{
+    -fx-text-fill:#0746A6;
+    -fx-border-color:rgba(7,70,166,0.3);
+}
+.JFXScrollPane{
+    -fx-background-color:#fff;
+}
+.compopox{
+-fx-background-color:white;
+-fx-font-size:18px;
+-fx-text-fill:#0746A6;
+}

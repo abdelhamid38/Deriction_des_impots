@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jboss-vfs-3.2.12.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/Libs/jboss-vfs-3.2.12.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

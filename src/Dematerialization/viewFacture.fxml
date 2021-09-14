@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1050.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dematerialization.ViewFactureController">
+    <stylesheets>
+        <URL value="@viewfacture.css" />
+    </stylesheets>
+    <children>
+        <HBox alignment="CENTER" layoutX="4.0" layoutY="496.0" prefHeight="92.0" prefWidth="1042.0" style="-fx-border-color: #0746A6; -fx-border-width: 1px 1px 1px 1px;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
+            <children>
+                <JFXButton fx:id="Parcourir" contentDisplay="GRAPHIC_ONLY" prefHeight="90.0" prefWidth="90.0" text="Parcourir" textFill="#0746a6">
+                    <graphic>
+                        <FontAwesomeIconView fill="#e9ab44" glyphName="FOLDER_OPEN" size="40" wrappingWidth="39.714284896850586" />
+                    </graphic>
+                    <font>
+                        <Font name="Tahoma Bold" size="24.0" />
+                    </font>
+                </JFXButton>
+            <Separator orientation="VERTICAL" prefHeight="77.0" prefWidth="4.0" />
+            <JFXButton fx:id="learn" layoutX="11.0" layoutY="11.0" prefHeight="90.0" prefWidth="191.0" text="Apprentissage">
+               <graphic>
+                  <FontAwesomeIconView fill="#0746a6" glyphName="CALCULATOR" size="40" wrappingWidth="39.714284896850586" />
+               </graphic>
+               <font>
+                  <Font name="Tahoma Bold" size="16.0" />
+               </font>
+            </JFXButton>
+                <Separator orientation="VERTICAL" prefHeight="77.0" prefWidth="4.0" />
+                <VBox alignment="CENTER" prefHeight="83.0" prefWidth="109.0" spacing="10.0">
+                    <children>
+                        <JFXTextField fx:id="width_field" disable="true" labelFloat="true" prefHeight="25.0" prefWidth="53.0" promptText="Width" />
+                        <JFXTextField fx:id="heith_field" disable="true" labelFloat="true" prefHeight="25.0" prefWidth="53.0" promptText="Height" />
+                    </children>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                </VBox>
+                <Separator orientation="VERTICAL" prefHeight="77.0" prefWidth="4.0" />
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                    <children>
+                        <JFXTextField disable="true" labelFloat="true" prefHeight="25.0" prefWidth="53.0" promptText="X " fx:id="x" />
+                        <JFXTextField fx:id="y" disable="true" labelFloat="true" prefHeight="25.0" prefWidth="53.0" promptText="Y " />
+                    </children>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                </VBox>
+                <Separator orientation="VERTICAL" prefHeight="77.0" prefWidth="4.0" />
+                <VBox alignment="CENTER" layoutX="222.0" layoutY="11.0" prefHeight="90.0" prefWidth="117.0" spacing="10.0">
+                    <children>
+                        <JFXTextField fx:id="imgw" disable="true" labelFloat="true" prefHeight="25.0" prefWidth="53.0" promptText="img width" />
+                        <JFXTextField fx:id="imgh" disable="true" labelFloat="true" maxWidth="107.0" minWidth="70.0" prefHeight="31.0" prefWidth="107.0" promptText="img height" />
+                    </children>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                </VBox>
+                <Separator layoutX="322.0" layoutY="11.0" orientation="VERTICAL" prefHeight="77.0" prefWidth="4.0" />
+                <JFXTextArea fx:id="Ocr_TextArea" disable="true" maxWidth="308.0" minWidth="308.0" prefHeight="80.0" prefWidth="308.0" promptText="Ocr" scrollLeft="1.0" scrollTop="1.0" styleClass="ocr" wrapText="true">
+                    <font>
+                        <Font name="Tahoma" size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                    </HBox.margin>
+                </JFXTextArea>
+            <ComboBox fx:id="Combobox" prefHeight="98.0" prefWidth="141.0" promptText="Champs" styleClass="compopox" />
+            </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+        </HBox>
+        <ScrollPane fx:id="scrollp1" layoutX="52.0" layoutY="29.0" prefHeight="583.0" prefWidth="1050.0" style="-fx-background-color: #fff;" styleClass="JFXScrollPane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <content>
+                <ImageView fx:id="imageView" fitHeight="579.0" fitWidth="1046.0" pickOnBounds="true" preserveRatio="true" />
+            </content></ScrollPane>
+    </children>
+</AnchorPane>

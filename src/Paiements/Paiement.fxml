@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="679.0" prefWidth="1051.0" style="-fx-border-color: white; -fx-border-width: 2px 0 0 2px;" styleClass="mainFxmlClass" stylesheets="@../Paiements/Paiement.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Paiements.paiementController">
+    <children>
+        <JFXTabPane layoutX="43.0" layoutY="114.0" prefHeight="680.0" prefWidth="1050.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Edits">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="Table" layoutX="2.0" layoutY="79.0" prefHeight="421.0" prefWidth="946.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="79.0">
+                                    <columns>
+                                        <TableColumn prefWidth="65.0" text="id" />
+                                        <TableColumn prefWidth="150.0" text="#" />
+                                        <TableColumn prefWidth="150.0" text="#" />
+                                        <TableColumn prefWidth="110.0" text="#" />
+                                        <TableColumn prefWidth="120.0" text="#" />
+                                        <TableColumn prefWidth="120.0" text="#" />
+                                        <TableColumn prefWidth="130.0" text="#" />
+                                        <TableColumn prefWidth="98.0" text="#" />
+                                    </columns>
+                                </TableView>
+                                <HBox layoutX="2.0" layoutY="496.0" prefHeight="70.0" prefWidth="946.0" style="-fx-border-color: #0746A6; -fx-border-width: 0 1px 1px 1px;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0">
+                                    <children>
+                                        <JFXButton fx:id="Add" prefHeight="69.0" prefWidth="191.0" text="Ajouter" textFill="#0746a6">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="#0746a6" glyphName="PLUS_SQUARE" size="30" wrappingWidth="38.571428298950195" />
+                                            </graphic>
+                                            <font>
+                                                <Font name="Tahoma" size="24.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="682.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="79.0" prefWidth="368.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <TextField fx:id="search" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="316.0" promptText="Search" styleClass="textfield">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                        <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="40.0" prefWidth="40.0">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="#0746a6" glyphName="SEARCH" size="30" />
+                                            </graphic>
+                                        </JFXButton>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets left="3.0" right="3.0" />
+                                    </opaqueInsets>
+                                </HBox>
+                                <Label alignment="CENTER" layoutX="14.0" layoutY="21.0" prefHeight="40.0" prefWidth="200.0" text="Avis de versement" textAlignment="CENTER" textFill="#0746a6" AnchorPane.leftAnchor="2.0">
+                                    <font>
+                                        <Font name="Tahoma" size="20.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#0746a6" glyphName="CHEVRON_RIGHT" size="25" />
+                                    </graphic>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="30" />
+                    </graphic>
+                </Tab>
+                <Tab text="Scanner">
+                    <content>
+                        <AnchorPane id="AnchorPane" fx:id="anchore" prefHeight="580.0" prefWidth="1050.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+                            <stylesheets>
+                                <URL value="@Paiement.css" />
+                            </stylesheets>
+                            <children>
+                                <HBox layoutX="4.0" layoutY="496.0" prefHeight="92.0" prefWidth="1042.0" style="-fx-border-color: #0746A6; -fx-border-width: 1px 1px 1px 1px;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
+                                    <children>
+                                        <JFXButton fx:id="Parcourir" contentDisplay="GRAPHIC_ONLY" prefHeight="90.0" prefWidth="90.0" text="Parcourir" textFill="#0746a6">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="#e9ab44" glyphName="FOLDER_OPEN" size="40" wrappingWidth="39.714284896850586" />
+                                            </graphic>
+                                            <font>
+                                                <Font name="Tahoma Bold" size="24.0" />
+                                            </font>
+                                        </JFXButton>
+                              <JFXButton fx:id="Scanner" contentDisplay="GRAPHIC_ONLY" layoutX="11.0" layoutY="11.0" prefHeight="90.0" prefWidth="90.0" text="Parcourir" textFill="#0746a6">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#e9ab44" glyphName="FOLDER_OPEN" size="40" wrappingWidth="39.714284896850586" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Tahoma Bold" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <Separator orientation="VERTICAL" prefHeight="77.0" prefWidth="4.0" />
+                              <VBox alignment="CENTER" prefHeight="83.0" prefWidth="109.0" spacing="10.0">
+                                 <children>
+                                    <JFXTextField fx:id="width_field" disable="true" labelFloat="true" prefHeight="25.0" prefWidth="53.0" promptText="Width" />
+                                    <JFXTextField fx:id="heith_field" disable="true" labelFloat="true" prefHeight="25.0" prefWidth="53.0" promptText="Height" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="77.0" prefWidth="4.0" />
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                 <children>
+                                    <JFXTextField disable="true" labelFloat="true" prefHeight="25.0" prefWidth="53.0" promptText="X " fx:id="x" />
+                                    <JFXTextField fx:id="y" disable="true" labelFloat="true" prefHeight="25.0" prefWidth="53.0" promptText="Y " />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="77.0" prefWidth="4.0" />
+                              <VBox alignment="CENTER" layoutX="222.0" layoutY="11.0" prefHeight="90.0" prefWidth="117.0" spacing="10.0">
+                                 <children>
+                                    <JFXTextField fx:id="imgw" disable="true" labelFloat="true" prefHeight="25.0" prefWidth="53.0" promptText="img width" />
+                                    <JFXTextField fx:id="imgh" disable="true" labelFloat="true" maxWidth="107.0" minWidth="70.0" prefHeight="31.0" prefWidth="107.0" promptText="img height" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                              <Separator layoutX="322.0" layoutY="11.0" orientation="VERTICAL" prefHeight="77.0" prefWidth="4.0" />
+                              <JFXTextArea fx:id="Ocr_TextArea" disable="true" maxWidth="308.0" minWidth="308.0" prefHeight="80.0" prefWidth="308.0" promptText="Ocr" scrollLeft="1.0" scrollTop="1.0" styleClass="ocr" wrapText="true">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </JFXTextArea>
+                                    </children>
+                                </HBox>
+                                <ScrollPane fx:id="scrollp1" layoutX="52.0" layoutY="29.0" prefHeight="522.0" prefWidth="1038.0" style="-fx-background-color: #fff;" styleClass="JFXScrollPane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <ImageView fx:id="imageView" fitHeight="522.0" fitWidth="1030.0" pickOnBounds="true" preserveRatio="true" />
+                           </content>
+                                </ScrollPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PRINT" size="30" />
+                    </graphic>
+                </Tab>
+                <Tab text="Statistics">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" size="30" />
+                    </graphic>
+                </Tab>
+            </tabs>
+        </JFXTabPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.jfx-tab-pane .tab-header-background{
+    -fx-background-color: #0746A6;
+}
+.jfx-tab-pane .tab-label{
+    -fx-font-family:Tahoma;
+    -fx-font-size:18px;
+    -fx-text-fill:#fff;
+}
+.jfx-tab-pane{
+    -fx-tab-min-width:150px;
+    -fx-tab-max-width:150px;
+    -fx-tab-min-height:50px;
+    -fx-tab-max-height:50px;
+}
+.jfx-tab-pane .tab:hover{
+    -fx-background-color:#0746A6;
+}
+.table-view {
+    -fx-background-color:transparent;
+    -fx-border-color:#0746A6;
+}
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+}
+.table-view .column-header, .table-view .filler{
+    -fx-size:50px;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-color:transparent;
+
+}
+.table-view .column-header-background{
+    -fx-border-color:#0746A6;
+    -fx-border-width:0 0 1px 0;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #0746A6 ;
+    -fx-font-family:tahoma;
+     -fx-font-size:14px;
+}
+.table-row-cell{
+    -fx-font-size:16px;
+    -fx-font-family:Tahoma;
+    -fx-alignment:center;
+    -fx-background-color:transparent;
+    -fx-border-color:#0746A6;
+    -fx-border-width:0 0 1px 0;
+}
+.table-row-cell:hover{
+    -fx-background-color:rgba(7 , 70 ,169,0.3);
+    -fx-font-size:18px;
+    -fx-border-width: 0 0 0 0;
+}
+.table-row-cell-label{
+    -fx-text-alignment:center;
+    -fx-text-fill:#0746A6;
+}
+.textfield{
+    -fx-text-fill:#0746A6;
+    -fx-border-color:rgba(7,70,166,0.3);
+}

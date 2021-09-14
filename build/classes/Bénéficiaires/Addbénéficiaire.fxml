@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Parents" prefHeight="472.0" prefWidth="800.0" styleClass="Anchorpane" stylesheets="@addbeneficaire.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proprietaire.AddbénéficiaireController">
+   <children>
+      <JFXButton fx:id="exit" contentDisplay="GRAPHIC_ONLY" layoutX="761.0" styleClass="hover_border_exit" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="TIMES" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="reduire" contentDisplay="GRAPHIC_ONLY" layoutX="736.0" styleClass="hover_border" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <FontAwesomeIconView fill="#141414" glyphName="MINUS" size="20" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="256.0" layoutY="16.0" prefHeight="31.0" prefWidth="372.0" styleClass="Lable" text="Ajouter noveau bénéficiaire" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="175.0">
+         <effect>
+            <DropShadow color="#323232" />
+         </effect>
+         <graphic>
+            <FontAwesomeIconView fill="#0746a6" glyphName="PLUS_SQUARE" size="30" wrappingWidth="38.714284896850586" />
+         </graphic></Label>
+      <VBox layoutX="127.0" layoutY="76.0" prefHeight="200.0" prefWidth="226.0" spacing="10.0">
+         <children>
+            <TextField fx:id="id" editable="false" promptText="Id" styleClass="JFXTextfield">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></TextField>
+            <TextField fx:id="Name" promptText="nom prenom or RS" styleClass="JFXTextfield" />
+            <JFXDatePicker fx:id="date_nss" promptText="Date de naissance" styleClass="JFXTextfield" />
+            <TextField fx:id="Adress" promptText="Adresse" styleClass="JFXTextfield" />
+            <TextField fx:id="wilaya" layoutX="10.0" layoutY="112.0" promptText="wilaya" styleClass="JFXTextfield" />
+            <TextField fx:id="commune" layoutX="10.0" layoutY="163.0" promptText="Commune" styleClass="JFXTextfield" />
+            <TextField fx:id="nationalite" layoutX="10.0" layoutY="214.0" promptText="nationalité" styleClass="JFXTextfield" />
+            <JFXButton onMouseClicked="#save" ripplerFill="#dfff0c" style="-fx-background-color: #0746A6;" styleClass="JFXButton" text="Sauvegarder" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="30" wrappingWidth="36.714284896850586" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <ImageView fitHeight="349.0" fitWidth="378.0" layoutX="388.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+   </children>
+   <effect>
+      <DropShadow color="#cbeb13" spread="0.23" />
+   </effect>
+</AnchorPane>

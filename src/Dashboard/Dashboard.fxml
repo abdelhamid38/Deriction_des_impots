@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="Parents" prefHeight="750.0" prefWidth="1302.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboard.DashboardController">
+    <stylesheets>
+        <URL value="@dashboard.css" />
+    </stylesheets>
+   <children>
+      <JFXDrawer fx:id="sliders" defaultDrawerSize="400.0" layoutX="-15.0" layoutY="160.0" opacity="0.9" prefHeight="750.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <HBox prefHeight="750.0" prefWidth="250.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="700.0" prefWidth="70.0" style="-fx-background-color: #0746B9;">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="8.0" layoutY="25.0" size="30" textAlignment="CENTER" wrappingWidth="35.00000238418579" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="settings" contentDisplay="GRAPHIC_ONLY" layoutX="5.0" layoutY="602.0" onAction="#onDraw" prefHeight="35.0" prefWidth="35.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="COG" size="30" text="" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="9.0" layoutY="591.0" prefHeight="35.0" prefWidth="35.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="QUESTION" size="35" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <VBox id="sidebar" fx:id="VBox" alignment="CENTER" prefHeight="750.0" prefWidth="309.0">
+               <children>
+                  <AnchorPane prefHeight="157.0" prefWidth="250.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="XING" layoutX="74.0" layoutY="74.0" size="70" />
+                        <Label alignment="CENTER" layoutY="117.0" prefHeight="23.0" prefWidth="194.0" text="des impots" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0">
+                           <font>
+                              <Font name="Tahoma Bold" size="18.0" />
+                           </font>
+                           <textFill>
+                              <RadialGradient centerX="0.25" centerY="0.46190476190476193" radius="0.5">
+                                 <stops>
+                                    <Stop color="#09f805" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="-6.0" layoutY="89.0" prefHeight="23.0" prefWidth="215.0" text="Derection ">
+                           <font>
+                              <Font name="Tahoma Bold" size="24.0" />
+                           </font>
+                           <textFill>
+                              <RadialGradient centerX="0.25" centerY="0.46190476190476193" radius="0.5">
+                                 <stops>
+                                    <Stop color="#09f805" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton accessibleText="Dashboard" alignment="BASELINE_LEFT" prefHeight="58.0" prefWidth="250.0" ripplerFill="#cfd909" text="Dashboard">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fcfcfc" glyphName="BANK" size="30" wrappingWidth="34.28571319580078" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="JFXButton" />
+                        <String fx:value="JFXButton-hover" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton accessibleText="Propriétés" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="58.0" prefWidth="250.0" ripplerFill="#cfd909" text="Propriétés">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fcfcfc" glyphName="LIST_ALT" size="30" wrappingWidth="34.28571319580078" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="JFXButton" />
+                        <String fx:value="JFXButton-hover" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton accessibleText="Propriétaires" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="58.0" prefWidth="250.0" ripplerFill="#cfd909" text="Propriétaires">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fcfcfc" glyphName="USERS" size="30" wrappingWidth="34.28571319580078" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="JFXButton" />
+                        <String fx:value="JFXButton-hover" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton accessibleText="Contrats" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="226.0" prefHeight="58.0" prefWidth="250.0" ripplerFill="#cfd909" text="Contrats">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fcfcfc" glyphName="FILE_TEXT" size="30" wrappingWidth="34.28571319580078" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="JFXButton" />
+                        <String fx:value="JFXButton-hover" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton accessibleText="Bénéficiaires" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="284.0" prefHeight="58.0" prefWidth="250.0" ripplerFill="#cfd909" text="Bénéficiaires">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fcfcfc" glyphName="USERS" size="30" wrappingWidth="34.28571319580078" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="JFXButton" />
+                        <String fx:value="JFXButton-hover" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton accessibleText="Paiements" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="342.0" prefHeight="58.0" prefWidth="250.0" ripplerFill="#cfd909" text="Paiements">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fcfcfc" glyphName="CREDIT_CARD_ALT" size="30" wrappingWidth="42.28571319580078" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="JFXButton" />
+                        <String fx:value="JFXButton-hover" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton accessibleText="Scanner" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="580.0" prefHeight="58.0" prefWidth="250.0" ripplerFill="#cfd909" text="Scanner">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fcfcfc" glyphName="FILE" size="30" wrappingWidth="33.28571319580078" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="JFXButton" />
+                        <String fx:value="JFXButton-hover" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="Parent" layoutX="250.0" layoutY="70.0" prefHeight="679.0" prefWidth="1051.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+      <AnchorPane layoutX="250.0" layoutY="-49.0" prefHeight="70.0" prefWidth="1050.0" styleClass="sidebar" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="exit" contentDisplay="GRAPHIC_ONLY" layoutX="898.0" styleClass="hover_border_exit" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TIMES" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="reduire" contentDisplay="GRAPHIC_ONLY" layoutX="886.0" styleClass="hover_border" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="20" />
+               </graphic>
+            </JFXButton>
+            <FontAwesomeIconView fill="WHITE" glyphName="BELL" layoutX="799.0" layoutY="43.0" size="25" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

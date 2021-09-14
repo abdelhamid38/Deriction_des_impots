@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1050.0" style="-fx-border-color: white; -fx-border-width: 2px 0 0 2px;" styleClass="mainFxmlClass" stylesheets="@../Bénéficiaires/bénéficiaires.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proprietaire.PropriétairesFXMLController">
+   <children>
+      <JFXTabPane layoutX="4.0" layoutY="4.0" prefHeight="630.0" prefWidth="1044.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Edits">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Table" layoutX="2.0" layoutY="79.0" prefHeight="465.0" prefWidth="1043.0" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="79.0">
+                           <columns>
+                              <TableColumn fx:id="id" prefWidth="65.0" text="id" />
+                              <TableColumn fx:id="Name" prefWidth="150.0" text="Nom et Prenom" />
+                              <TableColumn fx:id="Date_nss" prefWidth="150.0" text="Date de naissance" />
+                              <TableColumn fx:id="Adress" prefWidth="110.0" text="Adresse" />
+                              <TableColumn fx:id="Wilaya" prefWidth="120.0" text="Wilaya" />
+                              <TableColumn fx:id="Commune" prefWidth="120.0" text="Commune" />
+                              <TableColumn fx:id="Nationalite" prefWidth="130.0" text="Nationalite" />
+                              <TableColumn fx:id="Action" prefWidth="98.0" text="Action" />
+                           </columns>
+                        </TableView>
+                        <HBox layoutX="4.0" layoutY="496.0" prefHeight="70.0" prefWidth="1042.0" style="-fx-border-color: #0746A6; -fx-border-width: 1px 1px 1px 1px;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
+                           <children>
+                              <JFXButton onAction="#Add" prefHeight="69.0" prefWidth="180.0" text="Ajouter" textFill="#0746a6">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#0746a6" glyphName="PLUS_SQUARE" size="30" wrappingWidth="38.714284896850586" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Tahoma Bold" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton layoutX="11.0" layoutY="10.0" onMouseClicked="#Reload" prefHeight="69.0" prefWidth="180.0" text="Refresh" textFill="#0746a6">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#0746a6" glyphName="REFRESH" size="30" wrappingWidth="35.714284896850586" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Tahoma Bold" size="24.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="682.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="79.0" prefWidth="368.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TextField fx:id="search" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="316.0" promptText="Search" styleClass="textfield">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#0746a6" glyphName="SEARCH" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <opaqueInsets>
+                              <Insets left="3.0" right="3.0" />
+                           </opaqueInsets>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="30" />
+               </graphic>
+            </Tab>
+            <Tab text="Statistics">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" size="30" />
+               </graphic>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

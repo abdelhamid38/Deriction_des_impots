@@ -1,0 +1,30 @@
+/*
+ * Empty Stylesheet file.
+ */
+.mainFxmlClass {
+
+}
+.sidebar{
+    -fx-background-color:#0746A6;
+}
+.JFXButton{
+    -fx-text-fill:#fff;
+    -fx-font-size:20px;
+    -fx-font-family:Tahoma;
+
+}
+.JFXButton-hover:hover{
+    -fx-border-color:white;
+    -fx-border-width:0 4px 0 8px;
+    -fx-cursor:HAND;
+}
+.hover_border_exit:hover{
+
+    -fx-background-color:#ff0303;
+
+}
+.hover_border:hover{
+
+    -fx-background-color:#E2E4DD;
+
+}

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="lept4j-1.6.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/Libs/lept4j-1.6.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

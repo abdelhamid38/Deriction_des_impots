@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="Parent" prefHeight="600.0" prefWidth="1000.0" style="-fx-border-color: #0746A6; -fx-background-color: #fff;" stylesheets="@Displayinfo.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bénéficiaires.Displayinfo">
+   <children>
+      <JFXButton fx:id="exit" contentDisplay="GRAPHIC_ONLY" styleClass="hover_border_exit" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <FontAwesomeIconView fill="#0746a6" glyphName="TIMES" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="reduire" contentDisplay="GRAPHIC_ONLY" layoutX="533.0" styleClass="hover_border" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <FontAwesomeIconView fill="#0746a6" glyphName="MINUS" size="20" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="314.0" layoutY="14.0" prefHeight="31.0" prefWidth="372.0" styleClass="Lable" text="Afficher bénéficiaire info" AnchorPane.topAnchor="10.0">
+         <effect>
+            <DropShadow color="#323232" />
+         </effect>
+         <graphic>
+            <FontAwesomeIconView fill="#0746a6" glyphName="MAP" size="30" wrappingWidth="38.714284896850586" />
+         </graphic>
+      </Label>
+      <AnchorPane layoutX="14.0" layoutY="57.0" prefHeight="351.0" prefWidth="356.0" AnchorPane.leftAnchor="10.0">
+         <children>
+            <Label layoutY="-1.0" prefHeight="30.0" prefWidth="200.0" styleClass="lable" text="Personnel info">
+               <graphic>
+                  <FontAwesomeIconView fill="#0746a6" glyphName="USER" size="30" wrappingWidth="29.428571701049805" />
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <HBox layoutY="29.0" prefHeight="92.0" prefWidth="356.0">
+               <children>
+                  <ImageView fitHeight="106.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="128.0" spacing="7.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="130.0" styleClass="lable_info" text="Nom et prènom:" />
+                        <Label prefHeight="18.0" prefWidth="130.0" styleClass="lable_info" text="Date de naissance :" />
+                        <Label prefHeight="18.0" prefWidth="128.0" styleClass="lable_info" text="Adresse :" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="138.0" spacing="7.0">
+                     <children>
+                        <Label fx:id="Name" prefHeight="18.0" prefWidth="137.0" styleClass="lable_info" />
+                        <Label fx:id="Date_nss" prefHeight="18.0" prefWidth="140.0" styleClass="lable_info" />
+                        <Label fx:id="Adresse" prefHeight="18.0" prefWidth="143.0" styleClass="lable_info" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <JFXButton onAction="#getData" style="-fx-background-color: #0746A6;" text="get data" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Tahoma" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="EXTERNAL_LINK" size="25" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
